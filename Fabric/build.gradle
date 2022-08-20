@@ -1,7 +1,7 @@
 import net.fabricmc.loom.task.RemapJarTask
 
 plugins {
-    id 'fabric-loom' version '0.12-SNAPSHOT'
+    id 'fabric-loom' version '0.13-SNAPSHOT'
     id 'net.darkhax.curseforgegradle' version '1.0.7'
     id 'net.darkhax.tweedle' version '1.0.5'
     id 'idea'
@@ -19,18 +19,19 @@ apply from: '../gradle/property_helper.gradle'
 archivesBaseName = "${mod_id}-${minecraft_version}-${mod_version}-fabric"
 
 dependencies {
+    modImplementation fileTree(dir: 'libs', include: ['*.jar'])
     minecraft "com.mojang:minecraft:${minecraft_version}"
     mappings "net.fabricmc:yarn:${yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
 
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
 
-    modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:${rei_version}"
-    modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:${rei_version}"
+//    modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:${rei_version}"
+//    modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:${rei_version}"
 
-    modRuntimeOnly "com.terraformersmc:modmenu:${modmenu_version}"
+//    modRuntimeOnly "com.terraformersmc:modmenu:${modmenu_version}"
 
-    modImplementation("net.flytre.flytre_lib:flytre_lib-${minecraft_version}-fabric:${lib_version}")
+//    modImplementation("net.flytre.flytre_lib:flytre_lib-${minecraft_version}-fabric:${lib_version}")
 
 }
 

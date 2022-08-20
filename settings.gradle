@@ -16,4 +16,4 @@ pluginManagement {
 }
 
 rootProject.name = "Pipe"
-include('Common', 'Fabric', 'Forge')
+include('Common', 'Fabric')

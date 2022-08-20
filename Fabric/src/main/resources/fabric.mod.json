@@ -25,20 +25,14 @@
     "main": [
       "net.flytre.pipe.Initializer"
     ],
-    "server": [],
-    "rei_client": [
-      "net.flytre.pipe.rei.PipeClientPlugin"
-    ]
+    "server": []
   },
   "mixins": [
     "${mod_id}.mixins.json",
     "${mod_id}-fabric.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.11",
-    "minecraft": "1.19.x",
     "fabric": "*",
-    "flytre_lib": ">=${lib_version}",
     "java": ">=17"
   },
   "custom": {
